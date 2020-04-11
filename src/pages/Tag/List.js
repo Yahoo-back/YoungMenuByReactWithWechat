@@ -25,10 +25,15 @@ class TableList extends PureComponent {
 			pageSize: 10,
 			name: '',
 			desc: '',
+			url: '',
 			columns: [
 				{
 					title: '标签名',
 					dataIndex: 'name',
+				},
+				{
+					title: '跳转地址',
+					dataIndex: 'url',
 				},
 				{
 					title: '创建时间',
@@ -50,6 +55,7 @@ class TableList extends PureComponent {
 		};
 		this.createRef = React.createRef();
 		this.handleChange = this.handleChange.bind(this);
+		this.handleUrlChange = this.handleUrlChange.bind(this);
 		this.handleDescChange = this.handleDescChange.bind(this);
 		this.handleChangeKeyword = this.handleChangeKeyword.bind(this);
 		this.handleOk = this.handleOk.bind(this);
@@ -67,6 +73,13 @@ class TableList extends PureComponent {
 		// console.log('event :', event)
 		this.setState({
 			name: event.target.value,
+		});
+	}
+	
+	handleUrlChange(event) {
+		// console.log('event :', event)
+		this.setState({
+			url: event.target.value,
 		});
 	}
 
@@ -105,6 +118,7 @@ class TableList extends PureComponent {
 	handleOk = e => {
 		const { dispatch } = this.props;
 		const params = {
+			url: this.state.url,
 			name: this.state.name,
 			desc: this.state.desc,
 		};
@@ -282,9 +296,11 @@ class TableList extends PureComponent {
       ref={this.createRef}
       name={this.state.name}
       desc={this.state.desc}
+      url={this.state.url}
       visible={this.state.visible}
       showModal={this.showModal}
       handleChange={this.handleChange}
+      handleUrlChange={this.handleUrlChange}
       handleDescChange={this.handleDescChange}
       handleOk={this.handleOk}
       handleCancel={this.handleCancel}

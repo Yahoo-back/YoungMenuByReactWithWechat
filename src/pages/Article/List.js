@@ -64,7 +64,7 @@ class TableList extends PureComponent {
           dataIndex: 'author',
         },
         {
-          title: '食材',
+          title: '关键词',
           width: 130,
           dataIndex: 'keyword',
           render: arr => (
@@ -228,7 +228,7 @@ class TableList extends PureComponent {
     }
     if (!this.state.keyword) {
       notification.error({
-        message: '食材不能为空',
+        message: '关键词不能为空',
       });
       return;
     }
@@ -600,7 +600,7 @@ class TableList extends PureComponent {
           <Col md={24} sm={24}>
             <FormItem>
               <Search
-                placeholder="请输入菜名/食材"
+                placeholder="请输入菜名/关键词"
                 value={this.state.searchKeyword}
                 onSearch={this.handleSearch}
                 onChange={this.handleChangeSearchKeyword}

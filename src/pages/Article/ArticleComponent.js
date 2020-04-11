@@ -168,9 +168,9 @@ class ArticleComponent extends React.Component {
           />
           <Input
             style={normalCenter}
-            addonBefore="食材"
+            addonBefore="关键词"
             size="large"
-            placeholder="食材"
+            placeholder="关键词"
             name="keyword"
             value={this.props.keyword}
             onChange={this.props.handleChangeKeyword}

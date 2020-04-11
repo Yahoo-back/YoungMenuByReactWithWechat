@@ -33,6 +33,15 @@ class TagComponent extends React.Component {
         onChange={this.props.handleChange}
       />
       <Input
+        style={normalCenter}
+        addonBefore="跳转地址"
+        size="large"
+        placeholder="跳转地址"
+        name="title"
+        value={this.props.url}
+        onChange={this.props.handleUrlChange}
+      />
+      <Input
         
         addonBefore="描述"
         size="large"
