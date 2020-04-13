@@ -87,6 +87,23 @@ export default [
           },
         ],
       },
+        {
+        path: '/note',
+        name: 'note',
+        icon: 'file-markdown',
+        routes: [
+          {
+            path: '/note/list',
+            name: 'list',
+            component: './Note/List',
+          },
+          {
+            path: '/note/create',
+            name: 'create',
+            component: './Note/NoteCreate',
+          },
+        ],
+      },
       {
         path: '/News',
         name: 'News',

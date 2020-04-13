@@ -152,6 +152,37 @@ export async function getArticleDetail(params) {
     body: params,
   });
 }
+// 笔记
+export async function queryNote(params) {
+  return request(`/api/getNoteListAdmin?${stringify(params)}`);
+}
+
+export async function addNote(params) {
+  return request('/api/addNote', {
+    method: 'POST',
+    body: params,
+  });
+}
+export async function delNote(params) {
+  return request('/api/delNote', {
+    method: 'POST',
+    body: params,
+  });
+}
+
+export async function updateNote(params) {
+  return request('/api/updateNote', {
+    method: 'POST',
+    body: params,
+  });
+}
+
+export async function getNoteDetail(params) {
+  return request('/api/getNoteDetail', {
+    method: 'POST',
+    body: params,
+  });
+}
 
 
 // 时间轴
