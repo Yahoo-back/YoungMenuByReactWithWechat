@@ -27,7 +27,7 @@ export default {
 	},
 
 	effects: {
-		*query({ payload }, { call, put }) {
+		*queryNote({ payload }, { call, put }) {
 			const { resolve, params } = payload;
 			const response = yield call(queryNote, params);
 			!!resolve && resolve(response); // 返回数据

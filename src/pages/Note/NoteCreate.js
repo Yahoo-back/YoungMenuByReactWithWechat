@@ -380,7 +380,7 @@ class NoteCreate extends React.Component {
         </Select.Option>
       );
     }
-    // const { noteDetail } = this.props.note;
+    // const { articleDetail } = this.props.article;
     // const { changeType } = this.props;
     let originDefault = '原创';
     let stateDefault = '发布'; // 文章发布状态 => 0 草稿，1 发布
@@ -484,38 +484,11 @@ class NoteCreate extends React.Component {
         />
         <Input
           style={normalCenter}
-          addonBefore="作者"
+          addonBefore="用户名"
           size="large"
-          placeholder="作者"
+          placeholder="用户名"
           name="author"
           value={this.state.author}
-          onChange={this.handleChange}
-        />
-        <Input
-          style={normalCenter}
-          addonBefore="关键词"
-          size="large"
-          placeholder="关键词"
-          name="keyword"
-          value={this.state.keyword}
-          onChange={this.handleChange}
-        />
-        <Input
-          style={normalCenter}
-          addonBefore="描述"
-          size="large"
-          placeholder="描述"
-          name="desc"
-          value={this.state.desc}
-          onChange={this.handleChange}
-        />
-        <Input
-          style={normalCenter}
-          addonBefore="封面链接"
-          size="large"
-          placeholder="封面链接"
-          name="img_url"
-          value={this.state.img_url}
           onChange={this.handleChange}
         />
 
@@ -552,29 +525,6 @@ class NoteCreate extends React.Component {
           <Select.Option value="0">原创</Select.Option>
           <Select.Option value="1">转载</Select.Option>
           <Select.Option value="2">混合</Select.Option>
-        </Select>
-
-        <Select
-          allowClear
-          mode="multiple"
-          style={{ width: 180, marginLeft: 10, marginBottom: 20 }}
-          placeholder="标签"
-          defaultValue={tagsDefault}
-          value={this.state.tagsDefault}
-          onChange={this.handleTagChange}
-        >
-          {children}
-        </Select>
-        <Select
-          allowClear
-          mode="multiple"
-          style={{ width: 180, marginLeft: 10, marginBottom: 10 }}
-          placeholder="菜谱分类"
-          defaultValue={categoryDefault}
-          value={this.state.categoryDefault}
-          onChange={this.handleCategoryChange}
-        >
-          {categoryChildren}
         </Select>
         <div>
           <Button

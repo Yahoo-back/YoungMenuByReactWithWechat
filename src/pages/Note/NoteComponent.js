@@ -159,41 +159,13 @@ class NoteComponent extends React.Component {
           />
           <Input
             style={normalCenter}
-            addonBefore="作者"
+            addonBefore="用户名"
             size="large"
-            placeholder="作者"
+            placeholder="用户名"
             name="author"
             value={this.props.author}
             onChange={this.props.handleChangeAuthor}
           />
-          <Input
-            style={normalCenter}
-            addonBefore="关键词"
-            size="large"
-            placeholder="关键词"
-            name="keyword"
-            value={this.props.keyword}
-            onChange={this.props.handleChangeKeyword}
-          />
-          <Input
-            style={normalCenter}
-            addonBefore="描述"
-            size="large"
-            placeholder="描述"
-            name="desc"
-            value={this.props.desc}
-            onChange={this.props.handleChangeDesc}
-          />
-          <Input
-            style={normalCenter}
-            addonBefore="封面链接"
-            size="large"
-            placeholder="封面链接"
-            name="img_url"
-            value={this.props.img_url}
-            onChange={this.props.handleChangeImgUrl}
-          />
-
           <Select
             style={{ width: 200, marginTop: 20, marginBottom: 20 }}
             placeholder="选择发布状态"
@@ -227,29 +199,6 @@ class NoteComponent extends React.Component {
             <Select.Option value="0">原创</Select.Option>
             <Select.Option value="1">转载</Select.Option>
             <Select.Option value="2">混合</Select.Option>
-          </Select>
-
-          <Select
-            allowClear
-            mode="multiple"
-            style={{ width: 200, marginTop: 20, marginBottom: 20 }}
-            placeholder="标签"
-            defaultValue={tagsDefault}
-            value={this.props.tagsDefault}
-            onChange={this.props.handleTagChange}
-          >
-            {children}
-          </Select>
-          <Select
-            allowClear
-            mode="multiple"
-            style={{ width: 200, marginTop: 20, marginLeft: 10, marginBottom: 20 }}
-            placeholder="菜谱分类"
-            defaultValue={categoryDefault}
-            value={this.props.categoryDefault}
-            onChange={this.props.handleCategoryChange}
-          >
-            {categoryChildren}
           </Select>
           <TextArea
             style={{ marginBottom: 20 }}

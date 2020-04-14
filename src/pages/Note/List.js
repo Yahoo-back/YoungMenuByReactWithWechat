@@ -59,57 +59,9 @@ class TableList extends PureComponent {
           fixed: 'left',
         },
         {
-          title: '作者',
+          title: '用户名',
           width: 130,
           dataIndex: 'author',
-        },
-        {
-          title: '关键词',
-          width: 130,
-          dataIndex: 'keyword',
-          render: arr => (
-            <span>
-              {arr.map(item => (
-                <span color="magenta" key={item}>
-                  {item}
-                </span>
-              ))}
-            </span>
-          ),
-        },
-        {
-          title: '封面图',
-          dataIndex: 'img_url',
-          width: 140,
-          render: val => <Avatar shape="square" src={val} size={64} icon="user" />,
-        },
-        {
-          title: '标签',
-          dataIndex: 'tags',
-          width: 120,
-          render: arr => (
-            <span>
-              {arr.map(item => (
-                <Tag color="cyan" key={item.id}>
-                  {item.name}
-                </Tag>
-              ))}
-            </span>
-          ),
-        },
-        {
-          title: '分类',
-          width: 120,
-          dataIndex: 'category',
-          render: arr => (
-            <span>
-              {arr.map(item => (
-                <Tag color="blue" key={item.id}>
-                  {item.name}
-                </Tag>
-              ))}
-            </span>
-          ),
         },
         {
           title: '状态',
@@ -226,20 +178,11 @@ class TableList extends PureComponent {
       });
       return;
     }
-    if (!this.state.keyword) {
-      notification.error({
-        message: '关键词不能为空',
-      });
-      return;
-    }
     if (!this.state.content) {
       notification.error({
         message: '制作方法不能为空',
       });
       return;
-    }
-    if (keyword instanceof Array) {
-      keyword = keyword.join(',');
     }
     this.setState({
       loading: true,

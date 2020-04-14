@@ -95,5 +95,5 @@ const getArticle = (req, res) =>
   ]);
 
 export default {
-  'GET /api/article': getArticle,
+//'GET /api/article': getArticle,
 };
