@@ -49,7 +49,7 @@
     "nzh": "^1.0.3",
     "omit.js": "^1.0.0",
     "path-to-regexp": "^2.4.0",
-    "prismjs": "1.14.0",
+    "prismjs": "1.21.0",
     "prop-types": "^15.5.10",
     "qs": "^6.5.2",
     "rc-animate": "^2.4.4",
